@@ -1,7 +1,7 @@
 'use client'; // Directive for Next.js to indicate the component is a client-side component
 
 // Importing the authenticate function from the auth actions
-import { authenticate } from '@/actions/auth';
+// import { authenticate } from '@/actions/auth';
 // Importing Button component for UI with ShadCN/UI
 import { Button } from '@/components/ui/button';
 // Importing various form components for building the form UI with ShadCN/UI
@@ -58,10 +58,14 @@ export default function Auth() {
     setIsAuthenticating(true); // Set authenticating state to true
 
     try {
+      console.log('email:::', email)
+      console.log('password:::', password)
+      /*
       // Attempt to authenticate with given email and password
       await authenticate(email, password);
       // Navigate to the admin page on successful authentication
       router.push('/admin');
+      */
     } catch (error) {
       // Handle errors (intentionally left empty here)
     } finally {
