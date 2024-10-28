@@ -31,9 +31,7 @@ export default async function AdminLayout({
   return (
     <RenderMounted>
       <Header />
-        <main className="main-h-[calc(100svh-128px)] py-3">
-          {children}
-        </main>
+        <main className="min-h-[calc(100svh-128px)] py-3">{children}</main>
       <Footer />
     </RenderMounted>
   )
