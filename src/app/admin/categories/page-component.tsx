@@ -51,7 +51,9 @@ type Props = {
   categories: CategoriesWithProductsResponse;
 };
 
-const CategoriesPageComponent: FC<Props> = ({ categories }) => {
+ const CategoriesPageComponent: FC<Props> = ({ categories }) => {
+  const [] = useState(false)
+
   return (
     <>CategoriesPageComponent</>
   )

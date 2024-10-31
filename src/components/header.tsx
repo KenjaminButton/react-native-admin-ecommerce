@@ -18,6 +18,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
 import { createClient } from '@/utils/supabase/client';
+import { useEffect } from 'react';
 
 const NAV_LINKS = [
   { href: '/admin/dashboard', label: 'Dashboard' },
@@ -37,6 +38,8 @@ export const Header = () => {
     await supabase.auth.signOut()
     router.push('/')
   };
+
+
 
   return (
     <header className='sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6'>
